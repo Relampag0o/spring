@@ -1,22 +1,20 @@
 package org.example;
 
-
 import org.springframework.stereotype.Component;
 
 @Component
-public class Report implements ReportCreator {
-
+public class ManagerReport implements ReportCreator {
 
     private String id;
     private String body;
     private String date;
 
 
-    public Report() {
+    public ManagerReport() {
 
     }
 
-    public Report(String id, String body, String date) {
+    public ManagerReport(String id, String body, String date) {
         this.id = id;
         this.body = body;
         this.date = date;
@@ -57,6 +55,6 @@ public class Report implements ReportCreator {
 
     @Override
     public String elaborateReport() {
-        return "This is a normal report";
+        return "This is a manager report made by someone with power enough to do so!s";
     }
 }
